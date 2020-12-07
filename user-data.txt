@@ -1,0 +1,17 @@
+#!/bin/sh
+sudo yum update -y
+echo 'step 1' > /home/ec2-user/user-data-output.txt
+sudo amazon-linux-extras install -y lamp-mariadb10.2-php7.2 php7.2
+echo 'step 2' > /home/ec2-user/user-data-output.txt
+sudo yum install -y httpd git
+	sudo systemctl start httpd
+sudo systemctl enable httpd
+git clone https://github.com/sumitdeshpande/hotel-mgmt-system.git
+sudo mv hotel-mgmt-system/hotel-mgmt-system-app/* /var/www/html/
+
+sudo groupadd www
+sudo usermod -a -G www ec2-user
+sudo chgrp -R www /var/www
+sudo chmod 2775 /var/www
+find /var/www -type d -exec sudo chmod 2775 {} +
+find /var/www -type f -exec sudo chmod 0664 {} +

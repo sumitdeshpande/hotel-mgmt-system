@@ -12,10 +12,10 @@ class DB
     {
         if (empty(self::$instance)) {
             $db_info = array(
-                "host" => "localhost",
+                "host" => "octank-travel-portal-db-v1.cluster-ch5jexjp04yg.us-east-1.rds.amazonaws.com",
                 "port" => "3306",
-                "user" => "root",
-                "pass" => "",
+                "user" => "admin",
+                "pass" => "password",
                 "name" => "hotel",
                 "charset" => "UTF-8"
             );
