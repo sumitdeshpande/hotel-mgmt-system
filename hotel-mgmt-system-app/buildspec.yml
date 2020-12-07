@@ -6,3 +6,6 @@ phases:
   build:
     commands:
       - ./vendor/bin/phpunit ./hotel-mgmt-system-app/tests/
+  artifacts:
+    files:
+      - '**/*'
