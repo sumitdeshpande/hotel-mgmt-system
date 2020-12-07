@@ -17,7 +17,7 @@
   "require": {
     "fzaninotto/faker": "^1.7",
     "facebook/graph-sdk": "^5.7",
-    "ext-json": "*"
+    "ext-json": "*",
     "phpunit/phpunit": "v7.5.16"
 
   }
