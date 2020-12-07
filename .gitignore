@@ -3267,3 +3267,4 @@ vendor/squizlabs/php_codesniffer/src/Reports/Cbf.php
 vendor/squizlabs/php_codesniffer/src/Reporter.php
 vendor/squizlabs/php_codesniffer/src/Generators/Text.php
 vendor/squizlabs/php_codesniffer/src/Generators/Markdown.php
+vendor/.DS_Store

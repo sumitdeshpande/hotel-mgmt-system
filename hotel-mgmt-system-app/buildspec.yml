@@ -5,4 +5,4 @@ phases:
       - composer install
   build:
     commands:
-      - ./vendor/bin/phpunit tests
+      - ./vendor/bin/phpunit ./hotel-mgmt-system-app/
