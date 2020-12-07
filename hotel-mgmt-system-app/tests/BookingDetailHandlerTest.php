@@ -1,7 +1,7 @@
 <?php
 require './vendor/autoload.php';
-require './app/models/RequirementEnum.php';
-require './app/models/StatusEnum.php';
+require './hotel-mgmt-system-app/app/models/RequirementEnum.php';
+require './hotel-mgmt-system-app/app/models/StatusEnum.php';
 
 class BookingDetailHandlerTest extends PHPUnit_Framework_TestCase
 {

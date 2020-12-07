@@ -1,10 +1,10 @@
 <?php
 
 require './vendor/autoload.php';
-require 'app/DB.php';
-require 'app/models/Admin.php';
-require 'app/dao/AdminDAO.php';
-require 'app/handlers/AdminHandler.php';
+require './hotel-mgmt-system-app/app/DB.php';
+require './hotel-mgmt-system-app/app/models/Admin.php';
+require './hotel-mgmt-system-app/app/dao/AdminDAO.php';
+require './hotel-mgmt-system-app/app/handlers/AdminHandler.php';
 
 class AdminDAOTest extends PHPUnit_Framework_TestCase
 {
