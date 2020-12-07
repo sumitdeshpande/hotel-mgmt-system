@@ -5,4 +5,4 @@ phases:
       - composer install
   build:
     commands:
-      - phpunit tests
+      - ./vendor/bin/phpunit tests
