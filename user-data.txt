@@ -13,9 +13,27 @@ git clone https://github.com/sumitdeshpande/hotel-mgmt-system.git
 echo 'step 6' > /home/ec2-user/user-data-output.txt
 sudo mv hotel-mgmt-system/hotel-mgmt-system-app/* /var/www/html/
 
+#codeDeploy Agent
+sudo yum install -y aws-cli ruby jq
+export REGION=$(curl -s 169.254.169.254/latest/dynamic/instance-identity/document | jq -r ".region")
+sudo cd /tmp/
+sudo wget https://aws-codedeploy-${REGION}.s3.amazonaws.com/latest/install
+echo 'step 7' > /home/ec2-user/user-data-output.txt
+sudo chmod +x ./install
+echo 'step 8' > /home/ec2-user/user-data-output.txt
+sudo ./install auto
+echo 'step 9' > /home/ec2-user/user-data-output.txt
+
+
+
+
 sudo groupadd www
 sudo usermod -a -G www ec2-user
 sudo chgrp -R www /var/www
 sudo chmod 2775 /var/www
 find /var/www -type d -exec sudo chmod 2775 {} +
 find /var/www -type f -exec sudo chmod 0664 {} +
+
+
+sudo apachectl start
+sudo apachectl stop
