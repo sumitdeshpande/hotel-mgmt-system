@@ -10,14 +10,14 @@ const multiStepRsvnformData = {
   },
   d: function () {
     return {
-      cid: $('input[name="cid"][isForTest="true"]').val(),
-      start: $('input[name="startDate"][isForTest="true"]').val(),
-      end: $('input[name="endDate"][isForTest="true"]').val(),
-      type: $('select[name="roomType"][isForTest="true"]').val(),
-      requirement: $('select[name="roomRequirement"][isForTest="true"]').val(),
-      adults: $('select[name="adults"][isForTest="true"]').val(),
-      children: $('select[name="children"][isForTest="true"]').val(),
-      requests: $('textarea[name="specialRequests"][isForTest="true"]').val(),
+      cid: $('input[name="cid"][isForTest="false"]').val(),
+      start: $('input[name="startDate"][isForTest="false"]').val(),
+      end: $('input[name="endDate"][isForTest="false"]').val(),
+      type: $('select[name="roomType"][isForTest="false"]').val(),
+      requirement: $('select[name="roomRequirement"][isForTest="false"]').val(),
+      adults: $('select[name="adults"][isForTest="false"]').val(),
+      children: $('select[name="children"][isForTest="false"]').val(),
+      requests: $('textarea[name="specialRequests"][isForTest="false"]').val(),
       bookedDate: multiStepRsvnformData.cDate(document.getElementsByClassName('bookedDateTxt')[0].innerHTML),
       numNights: document.getElementsByClassName('numNightsTxt')[0].innerHTML,
       totalPrice: document.getElementsByClassName('totalTxt')[0].innerHTML,
@@ -121,9 +121,9 @@ function validateRsvnForm () {
 
   if (valid) {
     document.getElementsByClassName('step')[currentTab].className += ' finish';
-    new ReservationCost($('select[name="roomType"][isForTest="true"]').val(),
-      $('input[name="startDate"][isForTest="true"]').val(),
-      $('input[name="endDate"][isForTest="true"]').val()).displayAll();
+    new ReservationCost($('select[name="roomType"][isForTest="false"]').val(),
+      $('input[name="startDate"][isForTest="false"]').val(),
+      $('input[name="endDate"][isForTest="false"]').val()).displayAll();
   }
   return valid;
 }
