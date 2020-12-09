@@ -30,7 +30,6 @@ const multiStepRsvnformData = {
 let currentTab = 0;
 showTab(currentTab);
 
-
 function showTab (n) {
   let x = document.getElementsByClassName('rsvnTab');
   x[n].style.display = 'block';
