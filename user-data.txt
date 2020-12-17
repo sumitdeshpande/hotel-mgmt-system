@@ -5,7 +5,7 @@ sudo amazon-linux-extras install -y lamp-mariadb10.2-php7.2 php7.2
 echo 'step 2' > /home/ec2-user/user-data-output.txt
 sudo yum install -y httpd git
 echo 'step 3' > /home/ec2-user/user-data-output.txt
-	sudo systemctl start httpd
+sudo systemctl start httpd
 echo 'step 4' > /home/ec2-user/user-data-output.txt
 sudo systemctl enable httpd
 echo 'step 5' > /home/ec2-user/user-data-output.txt
