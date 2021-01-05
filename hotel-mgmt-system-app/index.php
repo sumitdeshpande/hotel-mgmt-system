@@ -13,6 +13,8 @@ session_start();
     <link rel="stylesheet" href="https://cdn.datatables.net/select/1.2.5/css/select.dataTables.min.css">
     <link rel="stylesheet" href="css/main.css">
 
+
+
     <?php
 
     require 'lib/phpPasswordHashing/passwordLib.php';
@@ -60,7 +62,7 @@ session_start();
             <div class="row">
                 <div class="col-sm-8 col-md-7 py-4">
                     <h4 class="text-white">About</h4>
-                    <p class="text-muted">Add some information about hotel booking.</p>
+                    <p class="text-muted">Octank Travel Booking Portal.</p>
                 </div>
                 <div class="col-sm-4 offset-md-1 py-4 text-right">
                     <?php if ($isSessionExists) { ?>
